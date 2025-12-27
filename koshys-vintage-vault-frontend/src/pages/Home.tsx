@@ -1,0 +1,177 @@
+import { Link } from 'react-router-dom'
+import './Home.css'
+
+function Home() {
+  return (
+    <div className="app">
+      {/* Navigation */}
+      <nav className="navbar">
+        <div className="container navbar-content">
+          <div className="logo-container">
+            <img src="/logo.jpg" alt="Koshy's Vintage Vault Logo" className="logo" />
+            <h1 className="brand-name">Koshy's Vintage Vault</h1>
+          </div>
+          <ul className="nav-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/stamps">Stamps</Link></li>
+            <li><Link to="/coins">Coins</Link></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section id="home" className="hero">
+        <img src="/stamps-hero.png" alt="Vintage Stamps Collection" className="hero-background" />
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <img src="/hero-logo.jpg" alt="Koshy's Vintage Vault" className="hero-logo" />
+          <h1 className="hero-title">Koshy's Vintage Vault</h1>
+          <p className="hero-subtitle">Timeless Treasures from Bygone Eras</p>
+          <p className="hero-description">
+            Discover our curated collection of rare stamps and coins, each piece telling a unique story 
+            from history. We specialize in premium collectibles that connect you to the past.
+          </p>
+          <div className="hero-cta">
+            <Link to="/stamps" className="btn btn-primary">Explore Collections</Link>
+            <a href="#contact" className="btn btn-secondary">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Collections */}
+      <section id="collections" className="collections">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Featured Collections</h2>
+            <p className="section-subtitle">Explore our finest stamps and coins from around the world</p>
+          </div>
+          
+          <div className="collections-grid">
+            {/* Stamps Collection */}
+            <Link to="/stamps" className="collection-card">
+              <img src="/stamps-hero.png" alt="Rare Stamps Collection" className="collection-image" />
+              <div className="collection-overlay">
+                <h3 className="collection-title">Rare Stamps</h3>
+                <p className="collection-description">
+                  Exquisite philatelic treasures from different eras and countries. Each stamp is carefully 
+                  authenticated and preserved to museum-quality standards.
+                </p>
+              </div>
+            </Link>
+
+            {/* Coins Collection */}
+            <Link to="/coins" className="collection-card">
+              <img src="/coins-collection.png" alt="Antique Coins Collection" className="collection-image" />
+              <div className="collection-overlay">
+                <h3 className="collection-title">Antique Coins</h3>
+                <p className="collection-description">
+                  Historic numismatic pieces including gold and silver coins from ancient civilizations 
+                  to modern rarities. Investment-grade collectibles.
+                </p>
+              </div>
+            </Link>
+
+            {/* Expert Authentication */}
+            <div className="collection-card">
+              <img src="/examining.png" alt="Expert Authentication" className="collection-image" />
+              <div className="collection-overlay">
+                <h3 className="collection-title">Expert Authentication</h3>
+                <p className="collection-description">
+                  Every piece in our collection is meticulously examined and authenticated by our team 
+                  of experts to ensure authenticity and quality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="about">
+        <div className="container">
+          <div className="about-content">
+            <div className="about-text">
+              <h2>A Legacy of Excellence</h2>
+              <p>
+                For over three decades, Koshy's Vintage Vault has been the premier destination for 
+                discerning collectors seeking rare stamps and coins. Our passion for preserving history 
+                drives us to source only the finest pieces from around the world.
+              </p>
+              <p>
+                Each item in our collection is carefully selected, authenticated, and documented. We pride 
+                ourselves on our expertise, integrity, and commitment to helping collectors build 
+                meaningful collections that stand the test of time.
+              </p>
+              <p>
+                Whether you're a seasoned collector or just beginning your journey into the world of 
+                philately and numismatics, we're here to guide you with our knowledge and passion for 
+                these timeless treasures.
+              </p>
+            </div>
+            <div>
+              <img src="/examining.png" alt="Examining Collectibles" className="about-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="cta-section">
+        <div className="container">
+          <h2>Start Your Collection Today</h2>
+          <p>
+            Join our community of passionate collectors and discover pieces that will become 
+            cherished heirlooms for generations to come.
+          </p>
+          <a href="#contact" className="btn btn-primary">Get in Touch</a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="contact" className="footer">
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-section">
+              <h3>Koshy's Vintage Vault</h3>
+              <p>
+                Your trusted source for rare stamps and coins. Preserving history, one collectible at a time.
+              </p>
+            </div>
+            
+            <div className="footer-section">
+              <h3>Quick Links</h3>
+              <ul className="footer-links">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/stamps">Stamps</Link></li>
+                <li><Link to="/coins">Coins</Link></li>
+                <li><a href="#about">About Us</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-section">
+              <h3>Contact Us</h3>
+              <p>Email: info@koshysvintagevault.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+              <p>Hours: Mon-Sat, 10AM-6PM</p>
+            </div>
+            
+            <div className="footer-section">
+              <h3>Visit Our Store</h3>
+              <p>123 Heritage Lane</p>
+              <p>Historic District</p>
+              <p>City, State 12345</p>
+            </div>
+          </div>
+          
+          <div className="footer-bottom">
+            <p>&copy; 2025 Koshy's Vintage Vault. All rights reserved. | Established 1990</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default Home

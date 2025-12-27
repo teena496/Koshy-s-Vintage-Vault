@@ -35,6 +35,8 @@
   height: 60px;
   width: auto;
   transition: transform var(--transition-base);
+  mix-blend-mode: lighten;
+  /* This makes the black background transparent, showing only the gold design */
 }
 
 .logo:hover {
