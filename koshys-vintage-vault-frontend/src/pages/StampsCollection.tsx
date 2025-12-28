@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 import './StampsCollection.css'
 
 interface Stamp {
@@ -79,21 +80,7 @@ function StampsCollection() {
   return (
     <div className="stamps-page">
       {/* Navigation */}
-      <nav className="navbar">
-        <div className="container navbar-content">
-          <Link to="/" className="logo-container">
-            <img src="/logo.jpg" alt="Koshy's Vintage Vault Logo" className="logo" />
-            <h1 className="brand-name">Koshy's Vintage Vault</h1>
-          </Link>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/stamps">Stamps</Link></li>
-            <li><Link to="/coins">Coins</Link></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar currentPage="stamps" />
 
       {/* Page Header */}
       <section className="page-header">
